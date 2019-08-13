@@ -85,27 +85,28 @@ const buildSW = async () => {
 };
 
 const setSport = () => {
-    if (process.env.SPORT === "football") {
+    if (process.env.SPORT !== "basketball") {
         replace({
             regex: "basketball",
-            replacement: "football",
+            replacement: process.env.SPORT,
             paths: ["build/index.html"],
             silent: true,
         });
         replace({
             regex: "Basketball",
-            replacement: "Football",
+            replacement: process.env.SPORT,
             paths: ["build/index.html"],
             silent: true,
         });
 
         // lol
+        /*
         replace({
             regex: "football-gm.com/bbgm-ads",
             replacement: "basketball-gm.com/bbgm-ads",
             paths: ["build/index.html"],
             silent: true,
-        });
+        }); */
     }
 };
 
@@ -162,6 +163,7 @@ const genRev = () => {
 const getSport = () => {
     if (
         process.env.SPORT === "football" ||
+        process.env.SPORT === "soccer" ||
         process.env.SPORT === "basketball"
     ) {
         return process.env.SPORT;
