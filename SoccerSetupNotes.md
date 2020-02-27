@@ -1,0 +1,1 @@
+Firefox console is throwing "can't find player".  Doesn't look like Free Agent list is getting created?  Hm.
