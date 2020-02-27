@@ -28,7 +28,7 @@ const defenseStats = [
 const stats: {
     [key: Position]: string[],
 } = {
-    QB: [
+    GK: [
         "pssCmp",
         "pss",
         "cmpPct",
@@ -40,7 +40,7 @@ const stats: {
         "qbRat",
         "fmbLost",
     ],
-    RB: [
+    DEF: [
         "rus",
         "rusYds",
         "rusYdsPerAtt",
@@ -54,17 +54,8 @@ const stats: {
         "recLng",
         "fmbLost",
     ],
-    WR: ["tgt", "rec", "recYds", "recYdsPerAtt", "recTD", "recLng", "fmbLost"],
-    TE: ["tgt", "rec", "recYds", "recYdsPerAtt", "recTD", "recLng", "fmbLost"],
-    OL: [],
-    DL: defenseStats,
-    LB: defenseStats,
-    CB: defenseStats,
-    S: defenseStats,
-    K: ["fg", "fga", "fgPct", "fgLng", "xp", "xpa", "xpPct", "kickingPts"],
-    P: ["pnt", "pntYdsPerAtt", "pntIn20", "pntTB", "pntLng", "pntBlk"],
-    KR: ["kr", "krYds", "krYdsPerAtt", "krLng", "krTD"],
-    PR: ["pr", "prYds", "prYdsPerAtt", "prLng", "prTD"],
+    MID: ["tgt", "rec", "recYds", "recYdsPerAtt", "recTD", "recLng", "fmbLost"],
+    FWD: ["tgt", "rec", "recYds", "recYdsPerAtt", "recTD", "recLng", "fmbLost"],
 };
 
 async function updateDepth(

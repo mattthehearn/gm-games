@@ -164,7 +164,7 @@ export const createWithoutSaving = (
     }
     if (didsDivs.size < didsTeam.size) {
         throw new Error(
-            `divs in game attributes only has ${didsDivs.size} divisions, but your teams belong to ${didsTeam.size} divisions`,
+            ` ${didsDivs.size} divisions, but your teams belong to ${didsTeam.size} divisions`,
         );
     }
 

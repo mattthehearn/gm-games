@@ -323,34 +323,13 @@ const TEAM_STATS_TABLES = {
     },
 };
 
-const POSITIONS: Position[] = [
-    "QB",
-    "RB",
-    "WR",
-    "TE",
-    "OL",
-    "DL",
-    "LB",
-    "CB",
-    "S",
-    "K",
-    "P",
-    "KR",
-    "PR",
-];
+const POSITIONS: Position[] = ["GK", "DEF", "MID", "FWD"];
 
 const POSITION_COUNTS = {
-    QB: 3,
-    RB: 4,
-    WR: 6,
-    TE: 3,
-    OL: 9,
-    DL: 9,
-    LB: 7,
-    CB: 5,
-    S: 5,
-    K: 1,
-    P: 1,
+    GK: 3,
+    DEF: 8,
+    MID: 8,
+    FWD: 6,
 };
 
 const RATINGS: RatingKey[] = [

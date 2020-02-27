@@ -4,7 +4,7 @@ import { helpers } from "../../../../deion/worker/util";
 import type { PlayerRatings } from "../../../common/types";
 
 const info = {
-    QB: {
+    GK: {
         hgt: [1, 1],
         spd: [1, 1],
         endu: [1, 1],
@@ -14,7 +14,7 @@ const info = {
         bsc: [1, 1],
         elu: [1, 1],
     },
-    RB: {
+    DEF: {
         stre: [4, 1],
         spd: [8, 1],
         endu: [1, 1],
@@ -25,7 +25,7 @@ const info = {
         rbk: [1, 1],
         pbk: [2, 1],
     },
-    WR: {
+    MID: {
         hgt: [2, 1],
         stre: [1, 1],
         spd: [4, 2],
@@ -36,7 +36,7 @@ const info = {
         bsc: [1, 1],
         rbk: [1, 1],
     },
-    TE: {
+    FWD: {
         hgt: [4, 1],
         stre: [4, 2],
         spd: [1, 1],
@@ -47,84 +47,11 @@ const info = {
         bsc: [1, 1],
         rbk: [2, 1],
     },
-    OL: {
-        hgt: [1, 1],
-        stre: [2, 3],
-        spd: [1, 1],
-        rbk: [2, 1],
-        pbk: [2, 1],
-    },
-    DL: {
-        hgt: [4, 3],
-        stre: [8, 3],
-        spd: [2, 1],
-        endu: [1, 1],
-        prs: [8, 1],
-        rns: [8, 1],
-        hnd: [1, 1],
-    },
-    LB: {
-        hgt: [2, 3],
-        stre: [4, 1],
-        spd: [4, 1],
-        endu: [1, 1],
-        pcv: [2, 1],
-        tck: [8, 1],
-        prs: [2, 1],
-        rns: [2, 1],
-        hnd: [1, 1],
-    },
-    CB: {
-        hgt: [1, 1],
-        stre: [1, 1],
-        spd: [8, 2],
-        endu: [1, 1],
-        pcv: [8, 1],
-        rns: [1, 1],
-        hnd: [2, 1],
-    },
-    S: {
-        hgt: [1, 1],
-        stre: [3, 1],
-        spd: [4, 1.5],
-        endu: [1, 1],
-        pcv: [4, 1],
-        tck: [4, 1],
-        rns: [2, 1],
-        hnd: [2, 1],
-    },
-    K: {
-        kpw: [1, 1],
-        kac: [1, 1],
-    },
-    P: {
-        ppw: [1, 1],
-        pac: [1, 1],
-    },
-    KR: {
-        stre: [1, 1],
-        spd: [4, 1],
-        elu: [4, 1],
-        hnd: [2, 1],
-        bsc: [8, 1],
-    },
-    PR: {
-        stre: [1, 1],
-        spd: [4, 1],
-        elu: [4, 1],
-        hnd: [8, 1],
-        bsc: [8, 1],
-    },
 };
 
 // Handle some nonlinear interactions
 const bonuses = {
-    RB: ratings => helpers.bound((ratings.spd * ratings.elu) / 300, 6, 20),
-    WR: ratings => helpers.bound((ratings.spd * ratings.hnd) / 550, 0, 5),
-    TE: ratings => helpers.bound((ratings.stre * ratings.hnd) / 550, 2, 10),
-    LB: ratings => helpers.bound(ratings.tck / 30, 2, 5),
-    S: ratings =>
-        helpers.bound(((ratings.stre + 25) * ratings.pcv) / 550, 2, 15),
+    MID: ratings => helpers.bound((ratings.spd * ratings.elu) / 300, 6, 20),
 };
 
 const ovr = (ratings: PlayerRatings, pos?: string): number => {

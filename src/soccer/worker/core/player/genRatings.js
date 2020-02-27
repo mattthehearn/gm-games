@@ -39,7 +39,7 @@ const getPos = () => {
 };
 
 const getRatingsToBoost = (pos: string) => {
-    if (pos === "QB") {
+    if (pos === "GK") {
         return {
             hgt: 1,
             spd: 0.5,
@@ -54,7 +54,7 @@ const getRatingsToBoost = (pos: string) => {
             rns: -1,
         };
     }
-    if (pos === "RB") {
+    if (pos === "DEF") {
         return {
             spd: 1,
             bsc: 1,
@@ -66,7 +66,7 @@ const getRatingsToBoost = (pos: string) => {
             rns: -1,
         };
     }
-    if (pos === "WR") {
+    if (pos === "MID") {
         return {
             hgt: 1,
             spd: 1,
@@ -78,7 +78,7 @@ const getRatingsToBoost = (pos: string) => {
             rns: -1,
         };
     }
-    if (pos === "TE") {
+    if (pos === "FWD") {
         return {
             hgt: 1,
             stre: 0.5,
@@ -90,106 +90,6 @@ const getRatingsToBoost = (pos: string) => {
             tck: -1,
             prs: -1,
             rns: -1,
-        };
-    }
-    if (pos === "OL") {
-        return {
-            spd: -1.5,
-            hgt: 1,
-            stre: 1.25,
-            rbk: 1.1,
-            pbk: 1.1,
-            elu: -1,
-            bsc: -1,
-            hnd: -1,
-            tck: -1,
-            prs: -1,
-            rns: -1,
-            rtr: -1,
-        };
-    }
-    if (pos === "DL") {
-        return {
-            spd: -0.5,
-            hgt: 1.5,
-            stre: 1.25,
-            tck: 0.25,
-            prs: 1.1,
-            rns: 1.1,
-            elu: -1,
-            bsc: -1,
-            hnd: -1,
-            rtr: -1,
-        };
-    }
-    if (pos === "LB") {
-        return {
-            hgt: 0.5,
-            stre: 0.5,
-            spd: 0.25,
-            pcv: 0.5,
-            tck: 1.5,
-            prs: 0.75,
-            rns: 0.75,
-            elu: -0.5,
-            bsc: -1,
-            hnd: -1,
-            rtr: -0.75,
-        };
-    }
-    if (pos === "CB") {
-        return {
-            hgt: -0.5,
-            spd: 1.25,
-            pcv: 1.25,
-            hnd: -0.5,
-            elu: -0.5,
-            bsc: -0.5,
-            rtr: -0.25,
-        };
-    }
-    if (pos === "S") {
-        return {
-            hgt: -0.5,
-            stre: 0.5,
-            spd: 1,
-            pcv: 1,
-            tck: 0.75,
-            rns: 0.5,
-            hnd: -0.5,
-            elu: -0.5,
-            bsc: -0.5,
-            rtr: -0.5,
-        };
-    }
-    if (pos === "K") {
-        return {
-            kpw: 1.75,
-            kac: 1.25,
-            elu: -1,
-            bsc: -1,
-            hnd: -1,
-            rtr: -1,
-            tck: -1,
-            prs: -1,
-            rns: -1,
-            rbk: -1,
-            pbk: -1,
-        };
-    }
-    if (pos === "P") {
-        return {
-            ppw: 1.75,
-            pac: 1.25,
-            elu: -1,
-            bsc: -1,
-            hnd: -1,
-            rtr: -1,
-            tck: -1,
-            prs: -1,
-            rns: -1,
-            rbk: -1,
-            pbk: -1,
         };
     }
 
