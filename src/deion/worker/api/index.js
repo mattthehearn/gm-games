@@ -1164,7 +1164,7 @@ const reorderDepthDrag = async (pos: string, sortedPids: number[]) => {
     const t = await idb.cache.teams.get(g.userTid);
     const depth = t.depth;
     if (depth === undefined) {
-        throw new Error("Missing depth");
+        throw new Error("Missing depth (from src/deion/worker/api/index.js)");
     }
 
     depth[pos] = sortedPids;

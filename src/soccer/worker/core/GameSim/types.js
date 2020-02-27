@@ -6,7 +6,7 @@ export type PlayType =
     | "gameOver"
     | "injury"
     | "kickoff"
-    | "kickoffReutrn"
+    | "kickoffReturn"
     | "punt"
     | "puntReturn"
     | "extraPoint"

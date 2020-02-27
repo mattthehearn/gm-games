@@ -56,30 +56,7 @@ const makeTeams = (
 ): any => {
     const usedPids = new Set<number>();
 
-    const teamPositions = [
-        ["QB"],
-        ["RB"],
-        ["RB", "WR"],
-        ["WR"],
-        ["WR"],
-        ["TE"],
-        ["OL"],
-        ["OL"],
-        ["OL"],
-        ["OL"],
-        ["OL"],
-        ["DL"],
-        ["DL"],
-        ["DL"],
-        ["DL"],
-        ["LB"],
-        ["LB"],
-        ["LB"],
-        ["S"],
-        ["S"],
-        ["CB"],
-        ["CB"],
-    ];
+    const teamPositions = [["GK"], ["DEF"], ["MID"], ["FWD"]];
 
     const kickers = getTopPlayers(
         {

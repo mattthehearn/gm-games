@@ -96,7 +96,9 @@ async function updateDepth(
         // Sort players based on current depth chart
         const t = await idb.cache.teams.get(tid);
         if (!t.depth) {
-            throw new Error("Missing depth");
+            throw new Error(
+                "Missing depth (coming from src/soccer/worker/views/depth.js)",
+            );
         }
         const depthPlayers = getDepthPlayers(t.depth, players);
 

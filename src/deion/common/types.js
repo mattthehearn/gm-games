@@ -543,19 +543,10 @@ export type Team = {|
     budget: any,
     strategy: any,
     depth?: {
-        QB: number[],
-        RB: number[],
-        WR: number[],
-        TE: number[],
-        OL: number[],
-        DL: number[],
-        LB: number[],
-        CB: number[],
-        S: number[],
-        K: number[],
-        P: number[],
-        KR: number[],
-        PR: number[],
+        GK: number[],
+        DEF: number[],
+        MID: number[],
+        FWD: number[],
     },
 |};
 
@@ -736,35 +727,17 @@ export type WorkerOverridesCore = {|
             },
         >(
             depth: {
-                QB: number[],
-                RB: number[],
-                WR: number[],
-                TE: number[],
-                OL: number[],
-                DL: number[],
-                LB: number[],
-                CB: number[],
-                S: number[],
-                K: number[],
-                P: number[],
-                KR: number[],
-                PR: number[],
+                GK: number[],
+                DEF: number[],
+                MID: number[],
+                FWD: number[],
             },
             players: T[], // eslint-disable-line no-undef
         ) => {
-            QB: T[], // eslint-disable-line no-undef
-            RB: T[], // eslint-disable-line no-undef
-            WR: T[], // eslint-disable-line no-undef
-            TE: T[], // eslint-disable-line no-undef
-            OL: T[], // eslint-disable-line no-undef
-            DL: T[], // eslint-disable-line no-undef
-            LB: T[], // eslint-disable-line no-undef
-            CB: T[], // eslint-disable-line no-undef
-            S: T[], // eslint-disable-line no-undef
-            K: T[], // eslint-disable-line no-undef
-            P: T[], // eslint-disable-line no-undef
-            KR: T[], // eslint-disable-line no-undef
-            PR: T[], // eslint-disable-line no-undef
+            GK: T[], // eslint-disable-line no-undef
+            DEF: T[], // eslint-disable-line no-undef
+            MID: T[], // eslint-disable-line no-undef
+            FWD: T[], // eslint-disable-line no-undef
         },
         heightToRating?: (heightInInches: number) => number,
         madeHof?: (p: Player<> | PlayerWithoutPid<>) => boolean,

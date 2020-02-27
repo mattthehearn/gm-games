@@ -21,7 +21,9 @@ const rosterAutoSort = async (
     const t = await idb.cache.teams.get(tid);
     const depth = t.depth;
     if (depth === undefined) {
-        throw new Error("Missing depth");
+        throw new Error(
+            "Missing depth (coming from src/soccer/worker/core/team/rosterAutoSort.js)",
+        );
     }
 
     const playersFromCache = await idb.cache.players.indexGetAll(

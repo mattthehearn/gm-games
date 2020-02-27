@@ -123,11 +123,10 @@ const penalties: Penalty[] = [
         numPerSeason: 50,
         yds: 15,
         posOdds: {
-            QB: 0.01,
-            RB: 0.14,
-            WR: 0.3,
-            TE: 0.15,
-            OL: 0.4,
+            GK: 0.01,
+            DEF: 0.4,
+            MID: 0.35,
+            FWD: 0.24,
         },
     },
     {

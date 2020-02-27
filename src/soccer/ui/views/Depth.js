@@ -165,19 +165,10 @@ TBody.propTypes = {
 };
 
 const numStartersByPos = {
-    QB: 1,
-    RB: 1,
-    WR: 3,
-    TE: 1,
-    OL: 5,
-    DL: 4,
-    LB: 3,
-    CB: 2,
-    S: 2,
-    K: 1,
-    P: 1,
-    KR: 1,
-    PR: 1,
+    GK: 1,
+    DEF: 4,
+    MID: 3,
+    FWD: 3,
 };
 
 class Depth extends React.Component {
